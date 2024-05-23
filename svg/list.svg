@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 580.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cbb687;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path id="lign" class="cls-1" d="m36.52,80.53l-7.04,3.3,7.04,9.04v317.65l-6.52-1.63s2.97,4.31,6.52,9.47v132.14h-13.05v-85.7l5.72.02-5.72-3.91v-109.52l6.53-9.4-6.53,2.71v-142.54l6.53-19.45-6.53,11v-69.09l3.72-5.42-3.72-1.07V30h13.05v50.53Z"/>
+  <g id="losange-depths">
+    <rect class="cls-1" x="8.79" y="529.29" width="42.43" height="42.43" transform="translate(-380.48 182.45) rotate(-45)"/>
+  </g>
+  <g id="losange-sky">
+    <rect class="cls-1" x="8.79" y="8.79" width="42.43" height="42.43" transform="translate(-12.43 30) rotate(-45)"/>
+  </g>
+  <g id="losange-floor">
+    <rect class="cls-1" x="8.79" y="269.04" width="42.43" height="42.43" transform="translate(-196.45 106.23) rotate(-45)"/>
+  </g>
+</svg>
