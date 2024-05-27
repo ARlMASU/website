@@ -17,10 +17,10 @@
         </div>
       </a>
       <div class="nav-buttons-container">
-          <a class="nav-button" href="#home">
-            <p class="nav-button-text-zonai">home</p>
-            <p class="nav-button-text-english">Home</p>
-          </a>
+        <a class="nav-button" href="#home">
+          <p class="nav-button-text-zonai">home</p>
+          <p class="nav-button-text-english">Home</p>
+        </a>
         <a class="nav-button" href="#features">
           <p class="nav-button-text-zonai">tokuso</p>
           <p class="nav-button-text-english">Features</p>
@@ -44,31 +44,53 @@
       <img src="./images/link.webp" class="header-link" />
     </header>
     <main>
-      <p id="features">Features</p>
-      <p>Exploration</p>
-      <div>
-        <img src="./svg/list.svg" alt="list" />
-        <div>
-          <div>
-            <img src="./images/sky.png" alt="sky" />
-            <p>Fly in the Sky</p>
-          </div>
-          <div>
-            <img src="./images/floor.png" alt="floor" />
-            <p>Explore the Floor</p>
-          </div>
-          <div>
-            <img src="./images/depths.png" alt="depths" />
-            <p>Dive into the Depths</p>
+      <div class="features-exploration">
+        <h1 id="features">Features</h1>
+        <h2>Exploration</h2>
+        <div class="features-exploration-wrap">
+          <img
+            src="./svg/list.svg"
+            alt="list"
+            class="features-exploration-list"
+          />
+          <div class="features-exploration-images-n-texts-wrap">
+            <div class="features-exploration-images-n-texts">
+              <img
+                src="./images/sky.png"
+                alt="sky"
+                class="feature-exploration-image"
+              />
+              <p class="features-exploration-text">Fly in the Sky</p>
+            </div>
+            <div class="features-exploration-images-n-texts">
+              <img
+                src="./images/floor.png"
+                alt="floor"
+                class="feature-exploration-image"
+              />
+              <p class="features-exploration-text">Explore the Floor</p>
+            </div>
+            <div class="features-exploration-images-n-texts">
+              <img
+                src="./images/depths.png"
+                alt="depths"
+                class="feature-exploration-image"
+              />
+              <p class="features-exploration-text">Dive into the Depths</p>
+            </div>
           </div>
         </div>
       </div>
-      <p>Abilities</p>
-      <div>
-        <div></div>
-        <div>
-          <p>No ability selected</p>
-          <p>Hover an ability to have a description of it</p>
+      <div class="abilities-wrap">
+        <h2>Abilities</h2>
+        <div class="abilities-wheel-wrap">
+          <div class="abilities-wheel"></div>
+          <div class="abilities-text-wrap">
+            <h3 class="abilities-text-h3">No ability selected</h3>
+            <p class="abilities-text-p">
+              Hover an ability to have a description of it
+            </p>
+          </div>
         </div>
       </div>
       <div>
@@ -86,28 +108,21 @@
     <footer>
       <img src="./svg/logo.svg" class="footer-logo" />
       <div class="footer-central-part">
-        <a href="https://www.nintendo.com/us/privacy-policy/" target="_blank"
-          >Privacy Policy</a
-        >
-        <svg
-          width="5"
-          height="60"
-          viewBox="0 0 5 60"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line x1="0" y1="0" x2="0" y2="60" stroke="white" stroke-width="8" />
-        </svg>
-        <a href="https://www.nintendo.com/us/terms-of-use/" target="_blank"
-          >Terms of Use</a
-        >
+        <a href="https://www.nintendo.com/us/privacy-policy/" target="_blank">
+          Privacy Policy
+        </a>
+        <div class="line"></div>
+        <a href="https://www.nintendo.com/us/terms-of-use/" target="_blank">
+          Terms of Use
+        </a>
       </div>
       <a
         href="https://ec.nintendo.com/AU/en/titles/70010000063715"
         target="_blank"
         class="play-now-button"
-        >Play now</a
       >
+        Play now
+      </a>
     </footer>
   </body>
 </html>

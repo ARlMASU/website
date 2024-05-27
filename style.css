@@ -47,7 +47,7 @@ nav {
 .nav-logo {
   position: absolute;
   left: 24px;
-  height: 118px;
+  height: 108px;
 }
 
 .nav-logo * {
@@ -56,17 +56,18 @@ nav {
 }
 
 .nav-logo-circle {
-  width: 118px;
-  height: 118px;
+  width: 108px;
+  height: 108px;
   background-color: var(--primary);
   mask: url(./svg/logo-circle.svg) no-repeat center;
+  scale: 0.875;
   z-index: 0;
-  transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-logo-text {
-  width: 118px;
-  height: 118px;
+  width: 108px;
+  height: 108px;
   background-color: var(--on-surface-1);
   mask: url(./svg/logo-text.svg) no-repeat center;
   z-index: 1;
@@ -77,10 +78,10 @@ nav {
 }
 
 .nav-logo:hover .nav-logo-circle {
-  animation: nav-logo-circle 5s linear infinite;
+  animation: rotating 5s linear infinite forwards;
 }
 
-@keyframes nav-logo-circle {
+@keyframes rotating {
   from {
     transform: rotate(0deg);
   }
@@ -96,12 +97,15 @@ nav {
 .nav-logo:active .nav-logo-circle {
   background-color: var(--on-surface-1);
 }
+
 .nav-logo:active .nav-logo-circle-wrap {
   filter: drop-shadow(0px 0px 6px var(--on-surface-1));
 }
+
 .nav-logo:active .nav-logo-text {
   background-color: var(--primary);
 }
+
 .nav-logo:active .nav-logo-text-wrap {
   filter: drop-shadow(0px 0px 6px var(--primary));
 }
@@ -137,25 +141,21 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.nav-button:hover {
-  .nav-button-text-zonai {
-    filter: drop-shadow(0px 0px 12px var(--primary));
-  }
-  .nav-button-text-english {
-    filter: drop-shadow(0px 0px 12px var(--on-surface-0));
-  }
+.nav-button:hover .nav-button-text-zonai {
+  filter: drop-shadow(0px 0px 12px var(--primary));
+}
+.nav-button:hover .nav-button-text-english {
+  filter: drop-shadow(0px 0px 12px var(--on-surface-0));
 }
 
-.nav-button:active {
-  .nav-button-text-zonai {
-    color: var(--on-surface-0);
-    filter: drop-shadow(0px 0px 12px var(--on-surface-0));
-    transition-duration: 0.1s;
-  }
-  .nav-button-text-english {
-    color: var(--primary);
-    filter: drop-shadow(0px 0px 12px var(--primary));
-  }
+.nav-button:active .nav-button-text-zonai {
+  color: var(--on-surface-0);
+  filter: drop-shadow(0px 0px 12px var(--on-surface-0));
+  transition-duration: 0.1s;
+}
+.nav-button:active .nav-button-text-english {
+  color: var(--primary);
+  filter: drop-shadow(0px 0px 12px var(--primary));
 }
 
 header {
@@ -177,8 +177,9 @@ header {
 }
 
 .header-logo {
-  height: 480px;
+  height: 393px;
   filter: drop-shadow(0px 0px 128px rgb(73, 213, 156));
+  margin: 16px;
 }
 
 .play-now-button {
@@ -212,6 +213,106 @@ header {
   filter: drop-shadow(0px 4px 12px #000000);
 }
 
+.features-exploration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: var(--on-surface-0);
+  font-family: "rodinB";
+  font-size: 72px;
+  padding-top: 64px;
+}
+
+h1::after{
+  color: red;
+  font-size: 13px;
+  font-family: "rodinB";
+}
+
+h2 {
+  color: var(--on-surface-0);
+  font-family: "rodinDB";
+  font-size: 48px;
+}
+
+.features-exploration-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 28px;
+}
+
+.features-exploration-list {
+  height: 600px;
+}
+
+.features-exploration-images-n-texts-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 12px;
+  padding-left: 16px;
+}
+
+.features-exploration-images-n-texts {
+  display: flex;
+  flex-flow: row;
+  justify-content: left;
+  align-items: center;
+  gap: 16px;
+}
+
+.feature-exploration-image {
+  height: 237px;
+}
+
+.features-exploration-text {
+  font-family: "rodinDB";
+  font-size: 36px;
+}
+
+.abilities-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 16px;
+  padding-top: 192px;
+}
+
+.abilities-wheel-wrap{
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+}
+
+.abilities-wheel{
+  background-color: red;
+  height: 490px;
+  width: 490px;
+}
+
+.abilities-text-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.abilities-text-h3{
+  font-size: 40px;
+  font-family: "rodinB";
+  color: white;
+}
+
+.abilities-text-p{
+  font-size: 32px;
+  font-family: "rodinM";
+}
+
+
+
 p {
   color: var(--on-surface-0);
   font-family: "rodinDB";
@@ -227,7 +328,7 @@ img {
 }
 
 footer {
-  padding: 160px 0px 160px 0px;
+  margin: 160px 0px 160px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -243,7 +344,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 22px;
+}
+
+.line {
+  border-left: 3px solid rgb(255, 255, 255);
+  height: 56px;
+  margin-left: -3px;
+  top: 0;
 }
 
 .footer-central-part a {
