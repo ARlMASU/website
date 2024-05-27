@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 :root {
@@ -62,7 +63,7 @@ nav {
   mask: url(./svg/logo-circle.svg) no-repeat center;
   scale: 0.875;
   z-index: 0;
-  transition: all 0.2s ease-in-out;
+  transition: rotate 1s ease;
 }
 
 .nav-logo-text {
@@ -78,17 +79,17 @@ nav {
 }
 
 .nav-logo:hover .nav-logo-circle {
-  animation: rotating 5s linear infinite forwards;
+  /* animation: rotating 5s linear infinite forwards; */
 }
 
-@keyframes rotating {
+/* @keyframes rotating {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .nav-logo:hover .nav-logo-text-wrap {
   filter: drop-shadow(0px 0px 6px var(--on-surface-1));
@@ -124,6 +125,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .nav-button-text-zonai {
@@ -329,18 +331,26 @@ img {
 
 footer {
   margin: 160px 0px 160px 0px;
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 81px;
 }
 
 .footer-logo {
   height: 250px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 .footer-central-part {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -369,4 +379,12 @@ footer {
 
 .footer-central-part a:active {
   color: #9a9a9a;
+}
+
+.play-now-button-footer {
+  position: relative;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
 }

@@ -8,7 +8,7 @@
   </head>
   <body>
     <nav>
-      <a class="nav-logo" href="#home">
+      <a class="nav-logo" href="#home" onmouseover="animatetesmorts()">
         <div class="nav-logo-circle-wrap">
           <div class="nav-logo-circle"></div>
         </div>
@@ -17,15 +17,15 @@
         </div>
       </a>
       <div class="nav-buttons-container">
-        <a class="nav-button" href="#home">
+        <a class="nav-button" onclick="scrollToElement(home)">
           <p class="nav-button-text-zonai">home</p>
           <p class="nav-button-text-english">Home</p>
         </a>
-        <a class="nav-button" href="#features">
+        <a class="nav-button" onclick="scrollToElement(features)">
           <p class="nav-button-text-zonai">tokuso</p>
           <p class="nav-button-text-english">Features</p>
         </a>
-        <a class="nav-button" href="#story">
+        <a class="nav-button" onclick="scrollToElement(story)">
           <p class="nav-button-text-zonai">story</p>
           <p class="nav-button-text-english">Story</p>
         </a>
@@ -119,10 +119,11 @@
       <a
         href="https://ec.nintendo.com/AU/en/titles/70010000063715"
         target="_blank"
-        class="play-now-button"
+        class="play-now-button play-now-button-footer"
       >
         Play now
       </a>
     </footer>
   </body>
+  <script src="./index.js"></script>
 </html>
