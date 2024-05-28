@@ -31,14 +31,26 @@ function scrollToElement(element) {
 }
 
 let velocity = 0;
-let velocityDeg = 0;
+let timeoutId;
 
-function animatetesmorts() {
-  velocity += 100;
+function rotateAnim() {
+  console.log(velocity);
+  velocity += 10;
 
-  velocityDeg = velocity + "deg";
+  navLogoCircle.style.rotate = velocity + "deg";
 
-  navLogoCircle.style.rotate = velocityDeg;
+  timeoutId = setTimeout(rotateAnim, 60);
+
 }
 
-let timerId = setInterval(animatetesmorts(), 1000);
+function roundnum(num){
+  return Math.round(num / 180)*180;
+}
+
+function rotateStop(){
+  clearTimeout(timeoutId);
+  velocity = roundnum(velocity);
+  navLogoCircle.style.rotate = velocity + "deg";
+  console.log("STOP");
+  console.log(velocity);
+}

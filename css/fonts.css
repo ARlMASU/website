@@ -1,41 +1,41 @@
 @font-face {
   font-family: "rodinL";
-  src: url("./fonts/rodinL.otf");
+  src: url("../fonts/rodinL.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "rodinM";
-  src: url("./fonts/rodinM.otf");
+  src: url("../fonts/rodinM.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "rodinDB";
-  src: url("./fonts/rodinDB.otf");
+  src: url("../fonts/rodinDB.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "rodinB";
-  src: url("./fonts/rodinB.otf");
+  src: url("../fonts/rodinB.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "rodinUB";
-  src: url("./fonts/rodinUB.otf");
+  src: url("../fonts/rodinUB.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "zonai";
-  src: url("./fonts/ZonaiKunrei.otf");
+  src: url("../fonts/ZonaiKunrei.otf");
   font-weight: normal;
   font-style: normal;
 }
