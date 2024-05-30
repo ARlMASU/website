@@ -34,23 +34,15 @@ let velocity = 0;
 let timeoutId;
 
 function rotateAnim() {
-  console.log(velocity);
   velocity += 10;
-
   navLogoCircle.style.rotate = velocity + "deg";
-
   timeoutId = setTimeout(rotateAnim, 60);
-
 }
 
-function roundnum(num){
-  return Math.round(num / 180)*180;
-}
-
-function rotateStop(){
+function rotateStop() {
+  navLogoCircle.style.transitionDuration = "10s";
   clearTimeout(timeoutId);
-  velocity = roundnum(velocity);
+  velocity = Math.round(velocity / 180) * 180;
   navLogoCircle.style.rotate = velocity + "deg";
-  console.log("STOP");
-  console.log(velocity);
+  navLogoCircle.style.transitionDuration = "0.6s";
 }
