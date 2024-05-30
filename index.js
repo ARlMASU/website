@@ -35,6 +35,7 @@ let timeoutId;
 
 function rotateAnim() {
   velocity += 10;
+  console.log(velocity);
   navLogoCircle.style.rotate = velocity + "deg";
   timeoutId = setTimeout(rotateAnim, 60);
 }
@@ -45,4 +46,6 @@ function rotateStop() {
   velocity = Math.round(velocity / 180) * 180;
   navLogoCircle.style.rotate = velocity + "deg";
   navLogoCircle.style.transitionDuration = "0.6s";
+  console.log("Stop");
+  console.log(velocity);
 }
