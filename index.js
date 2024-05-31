@@ -1,16 +1,14 @@
-const features = document.querySelector("#features");
-const story = document.querySelector("#story");
-const navLogoCircle = document.querySelector(".nav-logo-circle");
-// const footerLogo = document.querySelector('.footer-logo');
-// const footerCentralPart = document.querySelector('.footer-central-part');
-// const footerButton = document.querySelector('.play-now-button-footer');
+const features = document.querySelector("#features"),
+  story = document.querySelector("#story"),
+  navLogoCircle = document.querySelector(".nav-logo-circle"),
+  diamonds = document.querySelectorAll(".diamonds"),
+  diamondsWrap = document.querySelectorAll(".diamonds-wrap"),
+  featuresExplorationImagesNTexts = document.querySelectorAll(
+    ".features-exploration-images-n-texts"
+  );
 
-// let widthCentralPart = footerCentralPart.getBoundingClientRect().width;
-
-// console.log(widthCentralPart);
-
-// footerLogo.style.paddingRight = Math.round(widthCentralPart) * 2 + "px";
-// footerButton.style.paddingLeft = Math.round(widthCentralPart) * 2 + "px";
+let velocity = 0;
+let timeoutId;
 
 function scrollToElement(element) {
   if (element != home) {
@@ -30,22 +28,27 @@ function scrollToElement(element) {
   }
 }
 
-let velocity = 0;
-let timeoutId;
-
 function rotateAnim() {
+  navLogoCircle.style.transitionDuration = "0.6s";
   velocity += 10;
-  console.log(velocity);
   navLogoCircle.style.rotate = velocity + "deg";
   timeoutId = setTimeout(rotateAnim, 60);
 }
 
 function rotateStop() {
-  navLogoCircle.style.transitionDuration = "10s";
+  navLogoCircle.style.transitionDuration = "1s";
   clearTimeout(timeoutId);
   velocity = Math.round(velocity / 180) * 180;
   navLogoCircle.style.rotate = velocity + "deg";
-  navLogoCircle.style.transitionDuration = "0.6s";
-  console.log("Stop");
-  console.log(velocity);
+}
+
+for (let i = 0; i <= 2; i++) {
+  featuresExplorationImagesNTexts[i].addEventListener("mouseenter", () => {
+    diamonds[i].classList.toggle("diamond-active");
+    diamondsWrap[i].classList.toggle("diamond-wrap-active");
+  });
+  featuresExplorationImagesNTexts[i].addEventListener("mouseleave", () => {
+    diamonds[i].classList.toggle("diamond-active");
+    diamondsWrap[i].classList.toggle("diamond-wrap-active");
+  });
 }

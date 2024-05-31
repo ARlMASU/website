@@ -10,9 +10,9 @@
     <nav>
       <a
         class="nav-logo"
-        href="#home"
         onmouseover="rotateAnim()"
         onmouseout="rotateStop()"
+        onclick="scrollToElement(home)"
       >
         <div class="nav-logo-circle-wrap">
           <div class="nav-logo-circle"></div>
@@ -42,7 +42,7 @@
         <a
           href="https://ec.nintendo.com/AU/en/titles/70010000063715"
           target="_blank"
-          class="play-now-button"
+          class="play-now-button header-play-now-button"
           >Play now</a
         >
       </div>
@@ -59,12 +59,21 @@
               alt="list"
               class="features-exploration-list"
             />
-            <div class="diamond diamond-1"></div>
-            <div class="diamond diamond-2"></div>
-            <div class="diamond diamond-3"></div>
+            <div class="diamonds-wrap diamond-1-wrap">
+              <div class="diamonds diamond-1"></div>
+            </div>
+            <div class="diamonds-wrap diamond-2-wrap">
+              <div class="diamonds diamond-2"></div>
+            </div>
+            <div class="diamonds-wrap diamond-3-wrap">
+              <div class="diamonds diamond-3"></div>
+            </div>
           </div>
           <div class="features-exploration-images-n-texts-wrap">
-            <div class="features-exploration-images-n-texts">
+            <div
+              class="features-exploration-images-n-texts"
+              onmouseover="whichDiamond=0"
+            >
               <div class="features-exploration-image-wrap">
                 <img
                   src="./images/sky-arrow.png"
@@ -75,7 +84,10 @@
               </div>
               <p class="features-exploration-text">Fly in the Sky</p>
             </div>
-            <div class="features-exploration-images-n-texts">
+            <div
+              class="features-exploration-images-n-texts"
+              onmouseover="whichDiamond=1"
+            >
               <div class="features-exploration-image-wrap">
                 <img
                   src="./images/floor-arrow.png"
@@ -86,7 +98,10 @@
               </div>
               <p class="features-exploration-text">Explore the Floor</p>
             </div>
-            <div class="features-exploration-images-n-texts">
+            <div
+              class="features-exploration-images-n-texts"
+              onmouseover="whichDiamond=2"
+            >
               <div class="features-exploration-image-wrap">
                 <img
                   src="./images/depths-arrow.png"
