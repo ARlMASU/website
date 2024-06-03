@@ -5,7 +5,13 @@ const features = document.querySelector("#features"),
   diamondsWrap = document.querySelectorAll(".diamonds-wrap"),
   featuresExplorationImagesNTexts = document.querySelectorAll(
     ".features-exploration-images-n-texts"
-  );
+  ),
+  featuresExplorationWrap = document.querySelector(
+    ".features-exploration-wrap"
+  ),
+  arrow = document.querySelectorAll(".arrow"),
+  arrowWrap = document.querySelectorAll(".arrow-wrap"),
+  featuresExplorationText = document.querySelectorAll(".features-exploration-text");
 
 let velocity = 0;
 let timeoutId;
@@ -42,13 +48,36 @@ function rotateStop() {
   navLogoCircle.style.rotate = velocity + "deg";
 }
 
-for (let i = 0; i <= 2; i++) {
-  featuresExplorationImagesNTexts[i].addEventListener("mouseenter", () => {
-    diamonds[i].classList.toggle("diamond-active");
-    diamondsWrap[i].classList.toggle("diamond-wrap-active");
-  });
-  featuresExplorationImagesNTexts[i].addEventListener("mouseleave", () => {
-    diamonds[i].classList.toggle("diamond-active");
-    diamondsWrap[i].classList.toggle("diamond-wrap-active");
-  });
-}
+let featuresExplorationImagesNTextsRect = [];
+const windowHeight = window.innerHeight;
+
+document.addEventListener("scroll", () => {
+  for (let i = 0; i <= 2; i++) {
+    featuresExplorationImagesNTextsRect[i] = featuresExplorationImagesNTexts[i].getBoundingClientRect();
+    if (
+      featuresExplorationImagesNTextsRect[i].top >= windowHeight / 2 - featuresExplorationImagesNTextsRect[i].height / 2 &&
+      featuresExplorationImagesNTextsRect[i].top <= windowHeight / 2 + featuresExplorationImagesNTextsRect[i].height / 2
+    ) {
+      diamonds[i].classList.add("diamond-active");
+      diamondsWrap[i].classList.add("diamond-wrap-active");
+      arrow[i].classList.add("arrow-active");
+      arrowWrap[i].classList.add("arrow-wrap-active");
+      featuresExplorationText[i].classList.add("features-exploration-text-active");
+    } else {
+      diamonds[i].classList.remove("diamond-active");
+      diamondsWrap[i].classList.remove("diamond-wrap-active");
+      arrow[i].classList.remove("arrow-active");
+      arrowWrap[i].classList.remove("arrow-wrap-active");
+      featuresExplorationText[i].classList.remove("features-exploration-text-active");
+    }
+  }
+});
+
+const arrowRect = arrow.getBoundingClientRect();
+const arrowCenterX = arrowRect.left + arrowRect.width / 2;
+
+const viewportCenterX = window.innerWidth / 2;
+
+const offsetX = (viewportCenterX - arrowCenterX) * 2.5;
+
+featuresExplorationWrap.style.marginLeft = `${offsetX}px`;

@@ -1,6 +1,12 @@
 @import url(./fonts.css);
 @import url(./variables.css);
 
+:root {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 *,
 ::before,
 ::after {
@@ -204,23 +210,21 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: #ffffff; */
 }
 
 h1 {
-  padding-top: 64px;
-  background-color: #ffffff;
-  font: bold 72px 'rodinB';
-  color: transparent;
-  text-shadow: 0px 2px 3px rgba(7, 7, 7, 0.8);
-  background-clip: text;
-  
+  color: var(--on-surface-0);
+  font-family: "rodinB";
+  font-size: 72px;
+  margin-top: 64px;
+  text-align: center;
 }
 
 h2 {
   color: var(--on-surface-0);
   font-family: "rodinDB";
   font-size: 48px;
+  text-align: center;
 }
 
 .features-exploration-wrap {
@@ -255,17 +259,18 @@ h2 {
 
 .diamond-active {
   transition: all 0.3s ease-in-out;
-  background-color: #fff;
+  background-color: var(--on-surface-1);
   transform: scale(1.2);
 }
 
 .diamond-wrap-active {
   transition: all 0.3s ease-in-out;
-  filter: drop-shadow(0 0 12px #ffffff);
+  filter: drop-shadow(0 0 12px var(--on-surface-1));
 }
 
 .diamonds-wrap {
   position: absolute;
+  transition: all 0.3s ease-in-out;
 }
 
 .diamond-1-wrap {
@@ -301,7 +306,7 @@ h2 {
   display: flex;
 }
 
-.feature-exploration-image {
+.features-exploration-image {
   height: 237px;
 }
 
@@ -325,28 +330,22 @@ h2 {
   font-family: "rodinDB";
   font-size: 36px;
   transition: all 0.2s ease-in-out;
+  transform-origin: left center;
 }
 
-.features-exploration-images-n-texts:hover .arrow-wrap {
+.arrow-wrap-active {
   top: -4px;
-  filter: drop-shadow(0 0 12px var(--on-surface-0));
+  filter: drop-shadow(0 0 12px var(--on-surface-1));
 }
-
-.features-exploration-images-n-texts:hover .arrow {
+.arrow-active {
   width: 96px;
   height: 28px;
-  background-color: var(--on-surface-0);
+  background-color: var(--on-surface-1);
 }
 
-.features-exploration-images-n-texts:hover .diamond {
-  background-color: var(--on-surface-0);
+.features-exploration-text-active {
+  transform: scale(1.2);
 }
-
-/* .features-exploration-images-n-texts:hover .features-exploration-text {
-  transform-origin: left center;
-  text-align: left;
-  font-size: 48px;
-} */
 
 .abilities-wrap {
   display: flex;
