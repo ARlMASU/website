@@ -11,7 +11,9 @@ const features = document.querySelector("#features"),
   ),
   arrow = document.querySelectorAll(".arrow"),
   arrowWrap = document.querySelectorAll(".arrow-wrap"),
-  featuresExplorationText = document.querySelectorAll(".features-exploration-text");
+  featuresExplorationText = document.querySelectorAll(
+    ".features-exploration-text"
+  );
 
 let velocity = 0;
 let timeoutId;
@@ -23,7 +25,7 @@ function scrollToElement(element) {
         Math.round(
           element.getBoundingClientRect().top +
             document.documentElement.scrollTop
-        ) - 100,
+        ) - 200,
       behavior: "smooth",
     });
   } else {
@@ -53,27 +55,34 @@ const windowHeight = window.innerHeight;
 
 document.addEventListener("scroll", () => {
   for (let i = 0; i <= 2; i++) {
-    featuresExplorationImagesNTextsRect[i] = featuresExplorationImagesNTexts[i].getBoundingClientRect();
+    featuresExplorationImagesNTextsRect[i] =
+      featuresExplorationImagesNTexts[i].getBoundingClientRect();
     if (
-      featuresExplorationImagesNTextsRect[i].top >= windowHeight / 2 - featuresExplorationImagesNTextsRect[i].height / 2 &&
-      featuresExplorationImagesNTextsRect[i].top <= windowHeight / 2 + featuresExplorationImagesNTextsRect[i].height / 2
+      featuresExplorationImagesNTextsRect[i].top >=
+        windowHeight / 2 - featuresExplorationImagesNTextsRect[i].height / 2 &&
+      featuresExplorationImagesNTextsRect[i].top <=
+        windowHeight / 2 + featuresExplorationImagesNTextsRect[i].height / 2
     ) {
       diamonds[i].classList.add("diamond-active");
       diamondsWrap[i].classList.add("diamond-wrap-active");
       arrow[i].classList.add("arrow-active");
       arrowWrap[i].classList.add("arrow-wrap-active");
-      featuresExplorationText[i].classList.add("features-exploration-text-active");
+      featuresExplorationText[i].classList.add(
+        "features-exploration-text-active"
+      );
     } else {
       diamonds[i].classList.remove("diamond-active");
       diamondsWrap[i].classList.remove("diamond-wrap-active");
       arrow[i].classList.remove("arrow-active");
       arrowWrap[i].classList.remove("arrow-wrap-active");
-      featuresExplorationText[i].classList.remove("features-exploration-text-active");
+      featuresExplorationText[i].classList.remove(
+        "features-exploration-text-active"
+      );
     }
   }
 });
 
-const arrowRect = arrow.getBoundingClientRect();
+const arrowRect = arrow[0].getBoundingClientRect();
 const arrowCenterX = arrowRect.left + arrowRect.width / 2;
 
 const viewportCenterX = window.innerWidth / 2;

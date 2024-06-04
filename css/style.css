@@ -212,7 +212,7 @@ header {
   align-items: center;
 }
 
-h1 {
+.features-exploration > h1 {
   color: var(--on-surface-0);
   font-family: "rodinB";
   font-size: 72px;
@@ -238,7 +238,7 @@ h2 {
 .list-wrap {
   position: relative;
   display: flex;
-  margin-right: 24px;
+  margin-right: 48px;
   justify-content: center;
   align-items: center;
 }
@@ -383,6 +383,113 @@ h2 {
 .abilities-text-p {
   font-size: 32px;
   font-family: "rodinM";
+}
+
+.story-decoration {
+  background-image: url(../svg/runes-bottom-ivory.svg);
+  height: 46px;
+  width: 100%;
+  padding-bottom: 48px;
+}
+
+.story-decoration-top {
+  margin-top: 128px;
+}
+
+.story-decoration-bottom {
+  transform: scaleY(-1);
+}
+
+.story {
+  background-color: var(--on-surface-1);
+  padding: 104px 48px 104px 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  height: 640px;
+  position: relative;
+}
+
+.story p,
+.story h1 {
+  color: var(--secondary);
+  font-family: "rodinB";
+}
+.story p {
+  font-size: 32px;
+}
+
+.story-title {
+  position: relative;
+}
+
+.story h1 {
+  position: relative;
+  font-size: 72px;
+}
+
+.story-title svg {
+  position: absolute;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -37.5%);
+  overflow: visible;
+}
+
+.story-title svg > polygon {
+  transform-origin: right right;
+  fill: #cbb58700;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.story-title:hover svg polygon {
+  fill: var(--on-surface-2);
+}
+
+.story-title svg polygon#triangle3 {
+  transform: translate(-25%, -25%);
+}
+
+.story-title svg polygon#triangle2 {
+  transform: translateY(25%);
+}
+
+.story-title svg polygon#triangle1 {
+  transform: translate(25%, -25%);
+}
+
+.story-title:hover svg polygon#triangle3 {
+  transform: translate(0%, 0%);
+}
+
+.story-title:hover svg polygon#triangle2 {
+  transform: translateY(0%);
+}
+
+.story-title:hover svg polygon#triangle1 {
+  transform: translate(0%, 0%);
+}
+
+.story-image-n-text {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  gap: 64px;
+}
+
+.story p span.blue {
+  color: #0f68b8;
+}
+
+.story p span.red {
+  color: #700b0b;
+}
+
+.story img {
+  height: 360px;
+  border-radius: 32px;
 }
 
 p {
