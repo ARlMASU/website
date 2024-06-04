@@ -434,7 +434,7 @@ h2 {
   height: 80px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -37.5%);
+  transform: translate(-50%, -25%);
   overflow: visible;
 }
 
@@ -442,9 +442,10 @@ h2 {
   transform-origin: right right;
   fill: #cbb58700;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: .2s;
 }
 
-.story-title:hover svg polygon {
+svg.in-view > polygon {
   fill: var(--on-surface-2);
 }
 
@@ -460,15 +461,15 @@ h2 {
   transform: translate(25%, -25%);
 }
 
-.story-title:hover svg polygon#triangle3 {
+svg.in-view polygon#triangle3 {
   transform: translate(0%, 0%);
 }
 
-.story-title:hover svg polygon#triangle2 {
+svg.in-view > polygon#triangle2 {
   transform: translateY(0%);
 }
 
-.story-title:hover svg polygon#triangle1 {
+svg.in-view > polygon#triangle1 {
   transform: translate(0%, 0%);
 }
 

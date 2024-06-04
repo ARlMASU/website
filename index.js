@@ -19,16 +19,25 @@ let velocity = 0;
 let timeoutId;
 
 function scrollToElement(element) {
-  if (element != home) {
+  if (element == features) {
     window.scrollTo({
       top:
         Math.round(
           element.getBoundingClientRect().top +
             document.documentElement.scrollTop
-        ) - 200,
+        ) - 175,
       behavior: "smooth",
     });
-  } else {
+  } else if(element == story){
+    window.scrollTo({
+      top:
+        Math.round(
+          element.getBoundingClientRect().top +
+            document.documentElement.scrollTop
+        ) - 250,
+      behavior: "smooth",
+    });
+  }else {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -90,3 +99,19 @@ const viewportCenterX = window.innerWidth / 2;
 const offsetX = (viewportCenterX - arrowCenterX) * 2.5;
 
 featuresExplorationWrap.style.marginLeft = `${offsetX}px`;
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+  if (entry.isIntersecting) {
+    console.log("" + entry.target);
+    entry.target.classList.add('in-view');
+    return;
+  }
+  entry.target.classList.remove('in-view');
+  });
+});
+
+const allAnimatedElements = document.querySelectorAll('.animate');
+
+allAnimatedElements.forEach((element) => observer.observe(element));
