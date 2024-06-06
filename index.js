@@ -13,7 +13,8 @@ const features = document.querySelector("#features"),
   arrowWrap = document.querySelectorAll(".arrow-wrap"),
   featuresExplorationText = document.querySelectorAll(
     ".features-exploration-text"
-  );
+  ),
+  footer = document.querySelector("footer");
 
 let velocity = 0;
 let timeoutId;
@@ -104,7 +105,6 @@ featuresExplorationWrap.style.marginLeft = `${offsetX}px`;
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
   if (entry.isIntersecting) {
-    console.log("" + entry.target);
     entry.target.classList.add('in-view');
     return;
   }

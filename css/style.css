@@ -372,9 +372,69 @@ h2 {
 }
 
 .abilities-wheel {
-  background-color: red;
+  position: relative;
   height: 490px;
   width: 490px;
+}
+
+.abilities-wheel-parts {
+  width: 178px;
+  rotate: -90deg;
+  position: relative;
+}
+
+.abilities-wheel-icon {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  transform-origin: center center;
+}
+
+.abilities-wheel-parts:nth-of-type(even) {
+  rotate: 90deg;
+}
+
+.abilities-wheel-parts-wrap {
+  position: absolute;
+  display: flex;
+  top: 35%;
+  gap: 160px;
+}
+
+.abilities-wheel-parts-wrap:nth-child(1) {
+  rotate: 45deg;
+}
+.abilities-wheel-parts-wrap:nth-child(2) {
+  rotate: 90deg;
+}
+.abilities-wheel-parts-wrap:nth-child(3) {
+  rotate: 135deg;
+}
+.abilities-wheel-parts-wrap:nth-child(4) {
+  rotate: 180deg;
+}
+
+.abilities-wheel-icon-1 {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.abilities-wheel-icon-2 {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+.abilities-wheel-icon-4 {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.abilities-wheel-icon-5 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.abilities-wheel-icon-6 {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.abilities-wheel-icon-7 {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.abilities-wheel-icon-8 {
+  transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .abilities-text-wrap {
@@ -513,6 +573,7 @@ footer {
 
 .footer-logo {
   height: 250px;
+  position: relative;
 }
 
 .footer-central-part {
@@ -550,7 +611,7 @@ footer {
   color: #9a9a9a;
 }
 
-.play-now-button-footer {
+.footer-play-now-button {
   position: relative;
 }
 
