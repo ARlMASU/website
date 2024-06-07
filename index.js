@@ -123,3 +123,24 @@ allCircleSectorDuos.forEach((element) => {
   allCircleSectorIcon[whatCircleSectorDuo+1].style.rotate = (rotationForCircleSectorIcon) + "deg";
   whatCircleSectorDuo += 2;
 });
+
+
+const line = document.querySelector("line");
+const abilitiesWheel = document.querySelector(".abilities-wheel");
+
+function mouseUpdate(event) {
+  let rect = abilitiesWheel.getBoundingClientRect();
+  let mouseX = event.pageX - rect.left;
+  let mouseY = event.pageY - rect.y;
+// - rect.top - 2042.375;
+  line.setAttribute('x2', mouseX);
+  line.setAttribute('y2', mouseY);
+
+  console.log("x : " + mouseX);
+  console.log("y : " + mouseY);
+  console.log("rect.top : " + rect.y);
+}
+
+document.addEventListener("mousemove", mouseUpdate, false);
+document.addEventListener("mouseenter", mouseUpdate, false);
+document.addEventListener("mouseleave", mouseUpdate, false);

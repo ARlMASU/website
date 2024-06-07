@@ -376,18 +376,24 @@ h2 {
   padding-top: 192px;
 }
 
-.abilities-wheel{
+.abilities-wheel-n-texts {
+  display: flex;
+  gap: 64px;
+}
+
+.abilities-wheel {
   position: relative;
   width: 490px;
   height: 490px;
+  outline: 5px solid red;
 }
 
-.circle-sector-duo{
+.circle-sector-duo {
   position: absolute;
   display: flex;
   gap: 160px;
-  top: 50%;
-  left: 50%;
+  top: 35%;
+  left: -16px;
 }
 
 .circle-sector-bg {
@@ -398,91 +404,19 @@ h2 {
   scale: -1;
 }
 
-.circle-sector-icon{
+.circle-sector-icon {
   height: 100px;
   transform-origin: left top;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-.circle-sector{
+.circle-sector {
   position: relative;
   rotate: -90deg;
 }
-
-/* .abilities-wheel-wrap {
-  display: flex;
-  flex-direction: row;
-  gap: 64px;
-}
-
-.abilities-wheel {
-  position: relative;
-  height: 490px;
-  width: 490px;
-}
-
-.abilities-wheel-parts {
-  width: 178px;
-  rotate: -90deg;
-  position: relative;
-}
-
-.abilities-wheel-icon {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-
-}
-
-.abilities-wheel-parts:nth-of-type(even) {
-  rotate: 90deg;
-}
-
-.abilities-wheel-parts-wrap {
-  position: absolute;
-  display: flex;
-  top: 35%;
-  gap: 160px;
-}
-
-.abilities-wheel-parts-wrap:nth-child(1) {
-  rotate: 45deg;
-}
-.abilities-wheel-parts-wrap:nth-child(2) {
-  rotate: 90deg;
-}
-.abilities-wheel-parts-wrap:nth-child(3) {
-  rotate: 135deg;
-}
-.abilities-wheel-parts-wrap:nth-child(4) {
-  rotate: 180deg;
-}
-
-.abilities-wheel-icon-1 {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.abilities-wheel-icon-2 {
-  transform: translate(-50%, -50%) rotate(-135deg);
-}
-.abilities-wheel-icon-4 {
-  transform: translate(-50%, -50%) rotate(180deg);
-}
-.abilities-wheel-icon-5 {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-.abilities-wheel-icon-6 {
-  transform: translate(-50%, -50%) rotate(135deg);
-}
-.abilities-wheel-icon-7 {
-  transform: translate(-50%, -50%) rotate(-90deg);
-}
-.abilities-wheel-icon-8 {
-  transform: translate(-50%, -50%) rotate(90deg); 
-}*/
 
 .abilities-text-wrap {
   display: flex;
