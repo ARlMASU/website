@@ -578,17 +578,20 @@ svg.in-view > polygon#triangle1 {
 /* Footer */
 
 footer {
-  margin: 160px 0px 160px 0px;
+  height: 570px;
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .footer-logo {
   height: 250px;
-  position: relative;
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-425.75px, -50%);
 }
 
 .footer-central-part {
@@ -626,8 +629,12 @@ footer {
   color: #9a9a9a;
 }
 
-/* .footer-play-now-button {
-} */
+.footer-play-now-button {
+  transform-origin: left center;
+  position: absolute;
+  top: 50%;
+  transform: translate(404.215px, -50%);
+}
 
 @media screen and (max-width: 1260px) {
   .header-link {
