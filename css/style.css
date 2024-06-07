@@ -376,24 +376,40 @@ h2 {
   padding-top: 192px;
 }
 
+.abilities-wheel{
+  position: relative;
+  width: 490px;
+  height: 490px;
+}
+
+.circle-sector-duo{
+  position: absolute;
+  display: flex;
+  gap: 160px;
+  top: 50%;
+  left: 50%;
+}
+
 .circle-sector-bg {
   height: 140px;
 }
 
-img.circle-sector-bg:nth-child(odd) {
-  /* scale: -1; */
-  /* background-color: #fff; */
-  filter: drop-shadow(0 0 12px white);
+.circle-sector:nth-of-type(even) .circle-sector-bg {
+  scale: -1;
 }
 
-/* div:nth-of-type(even) .title{
- 
-  color: red;
-   
-} */
+.circle-sector-icon{
+  height: 100px;
+  transform-origin: left top;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
-.circle-sector-ability-icon {
-  height: 140px;
+.circle-sector{
+  position: relative;
+  rotate: -90deg;
 }
 
 /* .abilities-wheel-wrap {
@@ -419,7 +435,7 @@ img.circle-sector-bg:nth-child(odd) {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -45%);
-  transform-origin: center center;
+
 }
 
 .abilities-wheel-parts:nth-of-type(even) {

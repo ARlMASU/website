@@ -106,3 +106,20 @@ const observer = new IntersectionObserver((entries) => {
 const allAnimatedElements = document.querySelectorAll(".animate");
 
 allAnimatedElements.forEach((element) => observer.observe(element));
+
+const allCircleSectorDuos = document.querySelectorAll(".circle-sector-duo"),
+allCircleSectorIcon = document.querySelectorAll(".circle-sector-icon");
+
+let rotationForCircleSectorDuos = 0;
+let rotationForCircleSectorIcon = 90;
+let whatCircleSectorDuo = 0;
+
+allCircleSectorDuos.forEach((element) => {
+  rotationForCircleSectorDuos += 45;
+  rotationForCircleSectorIcon -= 45;
+  console.log(rotationForCircleSectorDuos);
+  element.style.rotate = (rotationForCircleSectorDuos) + "deg";
+  allCircleSectorIcon[whatCircleSectorDuo].style.rotate = (rotationForCircleSectorIcon) + "deg";
+  allCircleSectorIcon[whatCircleSectorDuo+1].style.rotate = (rotationForCircleSectorIcon) + "deg";
+  whatCircleSectorDuo += 2;
+});
