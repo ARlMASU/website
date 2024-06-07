@@ -49,68 +49,82 @@
       <img src="./images/link.webp" class="header-link" />
     </header>
     <main>
-      <div class="features-exploration">
-        <h1 id="features">Features</h1>
-        <h2>Exploration</h2>
-        <div class="features-exploration-wrap">
-          <div class="list-wrap">
-            <img
-              src="./svg/list-cropped.svg"
-              alt="list"
-              class="features-exploration-list"
-            />
-            <div class="diamonds-wrap diamond-1-wrap">
-              <div class="diamonds diamond-1"></div>
+      <h1 id="features">Features</h1>
+      <h2>Exploration</h2>
+      <div class="exploration">
+        <div class="exploration-wrap">
+          <div class="exploration-list-wrap">
+            <img src="./svg/list.svg" alt="list" class="exploration-list" />
+            <div
+              class="exploration-list-diamonds-wrap exploration-list-diamond-1-wrap"
+            >
+              <div
+                class="exploration-list-diamonds exploration-list-diamond-1"
+              ></div>
             </div>
-            <div class="diamonds-wrap diamond-2-wrap">
-              <div class="diamonds diamond-2"></div>
+            <div
+              class="exploration-list-diamonds-wrap exploration-list-diamond-2-wrap"
+            >
+              <div
+                class="exploration-list-diamonds exploration-list-diamond-2"
+              ></div>
             </div>
-            <div class="diamonds-wrap diamond-3-wrap">
-              <div class="diamonds diamond-3"></div>
+            <div
+              class="exploration-list-diamonds-wrap exploration-list-diamond-3-wrap"
+            >
+              <div
+                class="exploration-list-diamonds exploration-list-diamond-3"
+              ></div>
             </div>
           </div>
-          <div class="features-exploration-images-n-texts-wrap">
+          <div class="exploration-images-n-texts-wrap">
             <div
-              class="features-exploration-images-n-texts"
+              class="exploration-images-n-texts"
               onmouseover="whichDiamond=0"
             >
-              <div class="features-exploration-image-wrap">
+              <div class="exploration-image-wrap">
                 <img
                   src="./images/sky-arrow.png"
                   alt="sky"
-                  class="features-exploration-image"
+                  class="exploration-image"
                 />
-                <div class="arrow-wrap"><div class="arrow"></div></div>
+                <div class="exploration-arrow-wrap">
+                  <div class="exploration-arrow"></div>
+                </div>
               </div>
-              <p class="features-exploration-text">Fly in the Sky</p>
+              <p class="exploration-text">Fly in the Sky</p>
             </div>
             <div
-              class="features-exploration-images-n-texts"
+              class="exploration-images-n-texts"
               onmouseover="whichDiamond=1"
             >
-              <div class="features-exploration-image-wrap">
+              <div class="exploration-image-wrap">
                 <img
                   src="./images/floor-arrow.png"
                   alt="floor"
-                  class="features-exploration-image"
+                  class="exploration-image"
                 />
-                <div class="arrow-wrap"><div class="arrow"></div></div>
+                <div class="exploration-arrow-wrap">
+                  <div class="exploration-arrow"></div>
+                </div>
               </div>
-              <p class="features-exploration-text">Explore the Floor</p>
+              <p class="exploration-text">Explore the Floor</p>
             </div>
             <div
-              class="features-exploration-images-n-texts"
+              class="exploration-images-n-texts"
               onmouseover="whichDiamond=2"
             >
-              <div class="features-exploration-image-wrap">
+              <div class="exploration-image-wrap">
                 <img
                   src="./images/depths-arrow.png"
                   alt="floor"
-                  class="features-exploration-image"
+                  class="exploration-image"
                 />
-                <div class="arrow-wrap"><div class="arrow"></div></div>
+                <div class="exploration-arrow-wrap">
+                  <div class="exploration-arrow"></div>
+                </div>
               </div>
-              <p class="features-exploration-text">Dive into the Depths</p>
+              <p class="exploration-text">Dive into the Depths</p>
             </div>
           </div>
         </div>
@@ -121,43 +135,107 @@
           <div class="abilities-wheel">
             <div class="abilities-wheel-parts-wrap">
               <div class="abilities-wheel-parts">
-                <img src="./svg/abilities/abilitiesWheelStraight.svg" alt="" class="abilities-wheel-background"/>
-                <img src="./svg/abilities/map.svg" alt="" class="abilities-wheel-icon abilities-wheel-icon-1">
+                <img
+                  src="./svg/abilities/abilitiesWheelStraight.svg"
+                  alt=""
+                  class="abilities-wheel-background"
+                />
+                <img
+                  src="./svg/abilities/map.svg"
+                  alt=""
+                  class="abilities-wheel-icon abilities-wheel-icon-1"
+                />
               </div>
-              
+
               <div class="abilities-wheel-parts">
-                <img src="./svg/abilities/abilitiesWheelStraight.svg" alt="" class="abilities-wheel-background"/>
-                <img src="./svg/abilities/autobuild.svg" alt="" class="abilities-wheel-icon abilities-wheel-icon-2">
-              </div>
-            </div>
-            <div class="abilities-wheel-parts-wrap">
-              <div class="abilities-wheel-parts">
-                <img src="./svg/abilities/abilitiesWheelStraight.svg" alt="" class="abilities-wheel-background"/>
-                <img src="./svg/abilities/ascend.svg" alt="" class="abilities-wheel-icon abilities-wheel-icon-3">
-              </div>
-              <div class="abilities-wheel-parts">
-                <img src="./svg/abilities/abilitiesWheelStraight.svg" alt="" class="abilities-wheel-background"/>
-                <img src="./svg/abilities/fuse.svg" alt="" class="abilities-wheel-icon abilities-wheel-icon-4">
-              </div>
-            </div>
-            <div class="abilities-wheel-parts-wrap">
-              <div class="abilities-wheel-parts">
-                <img src="./svg/abilities/abilitiesWheelStraight.svg" alt="" class="abilities-wheel-background"/>
-                <img src="./svg/abilities/camera.svg" alt="" class="abilities-wheel-icon abilities-wheel-icon-5">
-              </div>
-              <div class="abilities-wheel-parts">
-                <img src="./svg/abilities/abilitiesWheelStraight.svg" alt="" class="abilities-wheel-background"/>
-                <img src="./svg/abilities/amiibo.svg" alt="" class="abilities-wheel-icon abilities-wheel-icon-6">
+                <img
+                  src="./svg/abilities/abilitiesWheelStraight.svg"
+                  alt=""
+                  class="abilities-wheel-background"
+                />
+                <img
+                  src="./svg/abilities/autobuild.svg"
+                  alt=""
+                  class="abilities-wheel-icon abilities-wheel-icon-2"
+                />
               </div>
             </div>
             <div class="abilities-wheel-parts-wrap">
               <div class="abilities-wheel-parts">
-                <img src="./svg/abilities/abilitiesWheelStraight.svg" alt="" class="abilities-wheel-background"/>
-                <img src="./svg/abilities/ultrahand.svg" alt="" class="abilities-wheel-icon abilities-wheel-icon-7">
+                <img
+                  src="./svg/abilities/abilitiesWheelStraight.svg"
+                  alt=""
+                  class="abilities-wheel-background"
+                />
+                <img
+                  src="./svg/abilities/ascend.svg"
+                  alt=""
+                  class="abilities-wheel-icon abilities-wheel-icon-3"
+                />
               </div>
               <div class="abilities-wheel-parts">
-                <img src="./svg/abilities/abilitiesWheelStraight.svg" alt="" class="abilities-wheel-background"/>
-                <img src="./svg/abilities/recall.svg" alt="" class="abilities-wheel-icon abilities-wheel-icon-8">
+                <img
+                  src="./svg/abilities/abilitiesWheelStraight.svg"
+                  alt=""
+                  class="abilities-wheel-background"
+                />
+                <img
+                  src="./svg/abilities/fuse.svg"
+                  alt=""
+                  class="abilities-wheel-icon abilities-wheel-icon-4"
+                />
+              </div>
+            </div>
+            <div class="abilities-wheel-parts-wrap">
+              <div class="abilities-wheel-parts">
+                <img
+                  src="./svg/abilities/abilitiesWheelStraight.svg"
+                  alt=""
+                  class="abilities-wheel-background"
+                />
+                <img
+                  src="./svg/abilities/camera.svg"
+                  alt=""
+                  class="abilities-wheel-icon abilities-wheel-icon-5"
+                />
+              </div>
+              <div class="abilities-wheel-parts">
+                <img
+                  src="./svg/abilities/abilitiesWheelStraight.svg"
+                  alt=""
+                  class="abilities-wheel-background"
+                />
+                <img
+                  src="./svg/abilities/amiibo.svg"
+                  alt=""
+                  class="abilities-wheel-icon abilities-wheel-icon-6"
+                />
+              </div>
+            </div>
+            <div class="abilities-wheel-parts-wrap">
+              <div class="abilities-wheel-parts">
+                <img
+                  src="./svg/abilities/abilitiesWheelStraight.svg"
+                  alt=""
+                  class="abilities-wheel-background"
+                />
+                <img
+                  src="./svg/abilities/ultrahand.svg"
+                  alt=""
+                  class="abilities-wheel-icon abilities-wheel-icon-7"
+                />
+              </div>
+              <div class="abilities-wheel-parts">
+                <img
+                  src="./svg/abilities/abilitiesWheelStraight.svg"
+                  alt=""
+                  class="abilities-wheel-background"
+                />
+                <img
+                  src="./svg/abilities/recall.svg"
+                  alt=""
+                  class="abilities-wheel-icon abilities-wheel-icon-8"
+                />
               </div>
             </div>
           </div>

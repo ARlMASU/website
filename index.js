@@ -1,19 +1,15 @@
 const features = document.querySelector("#features"),
   story = document.querySelector("#story"),
   navLogoCircle = document.querySelector(".nav-logo-circle"),
-  diamonds = document.querySelectorAll(".diamonds"),
-  diamondsWrap = document.querySelectorAll(".diamonds-wrap"),
-  featuresExplorationImagesNTexts = document.querySelectorAll(
-    ".features-exploration-images-n-texts"
+  diamonds = document.querySelectorAll(".exploration-list-diamonds"),
+  diamondsWrap = document.querySelectorAll(".exploration-list-diamonds-wrap"),
+  explorationImagesNTexts = document.querySelectorAll(
+    ".exploration-images-n-texts"
   ),
-  featuresExplorationWrap = document.querySelector(
-    ".features-exploration-wrap"
-  ),
-  arrow = document.querySelectorAll(".arrow"),
-  arrowWrap = document.querySelectorAll(".arrow-wrap"),
-  featuresExplorationText = document.querySelectorAll(
-    ".features-exploration-text"
-  ),
+  explorationWrap = document.querySelector(".exploration-wrap"),
+  arrow = document.querySelectorAll(".exploration-arrow"),
+  arrowWrap = document.querySelectorAll(".exploration-arrow-wrap"),
+  explorationText = document.querySelectorAll(".exploration-text"),
   footer = document.querySelector("footer");
 
 let velocity = 0;
@@ -29,7 +25,7 @@ function scrollToElement(element) {
         ) - 175,
       behavior: "smooth",
     });
-  } else if(element == story){
+  } else if (element == story) {
     window.scrollTo({
       top:
         Math.round(
@@ -38,7 +34,7 @@ function scrollToElement(element) {
         ) - 250,
       behavior: "smooth",
     });
-  }else {
+  } else {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -60,34 +56,30 @@ function rotateStop() {
   navLogoCircle.style.rotate = velocity + "deg";
 }
 
-let featuresExplorationImagesNTextsRect = [];
+let explorationImagesNTextsRect = [];
 const windowHeight = window.innerHeight;
 
 document.addEventListener("scroll", () => {
   for (let i = 0; i <= 2; i++) {
-    featuresExplorationImagesNTextsRect[i] =
-      featuresExplorationImagesNTexts[i].getBoundingClientRect();
+    explorationImagesNTextsRect[i] =
+      explorationImagesNTexts[i].getBoundingClientRect();
     if (
-      featuresExplorationImagesNTextsRect[i].top >=
-        windowHeight / 2 - featuresExplorationImagesNTextsRect[i].height / 2 &&
-      featuresExplorationImagesNTextsRect[i].top <=
-        windowHeight / 2 + featuresExplorationImagesNTextsRect[i].height / 2
+      explorationImagesNTextsRect[i].top >=
+        windowHeight / 2 - explorationImagesNTextsRect[i].height / 2 &&
+      explorationImagesNTextsRect[i].top <=
+        windowHeight / 2 + explorationImagesNTextsRect[i].height / 2
     ) {
-      diamonds[i].classList.add("diamond-active");
-      diamondsWrap[i].classList.add("diamond-wrap-active");
-      arrow[i].classList.add("arrow-active");
-      arrowWrap[i].classList.add("arrow-wrap-active");
-      featuresExplorationText[i].classList.add(
-        "features-exploration-text-active"
-      );
+      diamonds[i].classList.add("exploration-list-diamond-active");
+      diamondsWrap[i].classList.add("exploration-list-diamond-wrap-active");
+      arrow[i].classList.add("exploration-arrow-active");
+      arrowWrap[i].classList.add("exploration-arrow-wrap-active");
+      explorationText[i].classList.add("exploration-text-active");
     } else {
-      diamonds[i].classList.remove("diamond-active");
-      diamondsWrap[i].classList.remove("diamond-wrap-active");
-      arrow[i].classList.remove("arrow-active");
-      arrowWrap[i].classList.remove("arrow-wrap-active");
-      featuresExplorationText[i].classList.remove(
-        "features-exploration-text-active"
-      );
+      diamonds[i].classList.remove("exploration-list-diamond-active");
+      diamondsWrap[i].classList.remove("exploration-list-diamond-wrap-active");
+      arrow[i].classList.remove("exploration-arrow-active");
+      arrowWrap[i].classList.remove("exploration-arrow-wrap-active");
+      explorationText[i].classList.remove("exploration-text-active");
     }
   }
 });
@@ -99,19 +91,18 @@ const viewportCenterX = window.innerWidth / 2;
 
 const offsetX = (viewportCenterX - arrowCenterX) * 2.5;
 
-featuresExplorationWrap.style.marginLeft = `${offsetX}px`;
+explorationWrap.style.marginLeft = `${offsetX}px`;
 
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-  if (entry.isIntersecting) {
-    entry.target.classList.add('in-view');
-    return;
-  }
-  entry.target.classList.remove('in-view');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("in-view");
+      return;
+    }
+    entry.target.classList.remove("in-view");
   });
 });
 
-const allAnimatedElements = document.querySelectorAll('.animate');
+const allAnimatedElements = document.querySelectorAll(".animate");
 
 allAnimatedElements.forEach((element) => observer.observe(element));
