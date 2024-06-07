@@ -376,7 +376,27 @@ h2 {
   padding-top: 192px;
 }
 
-.abilities-wheel-wrap {
+.circle-sector-bg {
+  height: 140px;
+}
+
+img.circle-sector-bg:nth-child(odd) {
+  /* scale: -1; */
+  /* background-color: #fff; */
+  filter: drop-shadow(0 0 12px white);
+}
+
+/* div:nth-of-type(even) .title{
+ 
+  color: red;
+   
+} */
+
+.circle-sector-ability-icon {
+  height: 140px;
+}
+
+/* .abilities-wheel-wrap {
   display: flex;
   flex-direction: row;
   gap: 64px;
@@ -445,8 +465,8 @@ h2 {
   transform: translate(-50%, -50%) rotate(-90deg);
 }
 .abilities-wheel-icon-8 {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
+  transform: translate(-50%, -50%) rotate(90deg); 
+}*/
 
 .abilities-text-wrap {
   display: flex;
@@ -484,7 +504,7 @@ h2 {
 
 .story {
   background-color: var(--on-surface-1);
-  padding: 104px 48px 104px 48px;
+  padding: 52px 48px 104px 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -497,9 +517,6 @@ h2 {
 .story h1 {
   color: var(--secondary);
   font-family: "rodinB";
-}
-.story p {
-  font-size: 32px;
 }
 
 .story-title {
@@ -559,7 +576,11 @@ svg.in-view > polygon#triangle1 {
   display: flex;
   align-items: center;
   flex-flow: row;
-  gap: 64px;
+  gap: 4vw;
+}
+
+.story p {
+  font-size: 1.625vw;
 }
 
 .story p span.blue {
@@ -571,8 +592,9 @@ svg.in-view > polygon#triangle1 {
 }
 
 .story img {
-  height: 360px;
-  border-radius: 32px;
+  /* height: 360px; */
+  width: 32vw;
+  border-radius: 2vw;
 }
 
 /* Footer */
@@ -640,7 +662,7 @@ footer {
   .header-link {
     height: 472px;
   }
-  .exploration-text{
+  .exploration-text {
     font-size: 3vw;
   }
 }
