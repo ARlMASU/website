@@ -132,22 +132,7 @@
       <div class="abilities-wrap">
         <h2>Abilities</h2>
         <div class="abilities-wheel-n-texts">
-          <div class="abilities-wheel">
-            <div class="arrow">
-              <svg
-                height="490"
-                width="490"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <line
-                  x1="50%"
-                  y1="50%"
-                  x2="50%"
-                  y2="50%"
-                  style="stroke: #faf7dc; stroke-width: 3"
-                />
-              </svg>
-            </div>
+          <div class="abilities-wheel" onmouseenter="isMouseIn = true" onmouseleave="isMouseIn = false">
             <div class="circle-sector-duo">
               <div class="circle-sector">
                 <img
@@ -250,10 +235,24 @@
                   alt=""
                   class="circle-sector-icon"
                 />
-
-                <!-- amiibo camera fuse ascend autobuild map ultrahand recall -->
               </div>
             </div>
+          </div>
+          <div class="arrow">
+            <svg
+              height="490"
+              width="490"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="50%"
+                y1="50%"
+                x2="50%"
+                y2="50%"
+                style="stroke: #fff8b9; stroke-width: 3"
+              />
+            </svg>
+            <img src="./svg/abilities/abilitesWheelArrowActive.svg" alt="" class="arrow-tip">
           </div>
           <div class="abilities-text-wrap">
             <h3 class="abilities-text-h3">No ability selected</h3>
@@ -336,104 +335,3 @@
   </body>
   <script src="./index.js"></script>
 </html>
-
-<!-- <div class="abilities-wheel-wrap">
-            <div class="abilities-wheel">
-              <div class="abilities-wheel-parts-wrap">
-                <div class="abilities-wheel-parts">
-                  <img
-                    src="./svg/abilities/abilitiesWheelStraight.svg"
-                    alt=""
-                    class="abilities-wheel-background"
-                  />
-                  <img
-                    src="./svg/abilities/map.svg"
-                    alt=""
-                    class="abilities-wheel-icon abilities-wheel-icon-1"
-                  />
-                </div>
-
-                <div class="abilities-wheel-parts">
-                  <img
-                    src="./svg/abilities/abilitiesWheelStraight.svg"
-                    alt=""
-                    class="abilities-wheel-background"
-                  />
-                  <img
-                    src="./svg/abilities/autobuild.svg"
-                    alt=""
-                    class="abilities-wheel-icon abilities-wheel-icon-2"
-                  />
-                </div>
-              </div>
-              <div class="abilities-wheel-parts-wrap">
-                <div class="abilities-wheel-parts">
-                  <img
-                    src="./svg/abilities/abilitiesWheelStraight.svg"
-                    alt=""
-                    class="abilities-wheel-background"
-                  />
-                  <img
-                    src="./svg/abilities/ascend.svg"
-                    alt=""
-                    class="abilities-wheel-icon abilities-wheel-icon-3"
-                  />
-                </div>
-                <div class="abilities-wheel-parts">
-                  <img
-                    src="./svg/abilities/abilitiesWheelStraight.svg"
-                    alt=""
-                    class="abilities-wheel-background"
-                  />
-                  <img
-                    src="./svg/abilities/fuse.svg"
-                    alt=""
-                    class="abilities-wheel-icon abilities-wheel-icon-4"
-                  />
-                </div>
-              </div>
-              <div class="abilities-wheel-parts-wrap">
-                <div class="abilities-wheel-parts">
-                  <img
-                    src="./svg/abilities/abilitiesWheelStraight.svg"
-                    class="abilities-wheel-background"
-                  />
-                  <img
-                    src="./svg/abilities/camera.svg"
-                    class="abilities-wheel-icon abilities-wheel-icon-5"
-                  />
-                </div>
-                <div class="abilities-wheel-parts">
-                  <img
-                    src="./svg/abilities/abilitiesWheelStraight.svg"
-                    class="abilities-wheel-background"
-                  />
-                  <img
-                    src="./svg/abilities/amiibo.svg"
-                    class="abilities-wheel-icon abilities-wheel-icon-6"
-                  />
-                </div>
-              </div>
-              <div class="abilities-wheel-parts-wrap">
-                <div class="abilities-wheel-parts">
-                  <img
-                    src="./svg/abilities/abilitiesWheelStraight.svg"
-                    class="abilities-wheel-background"
-                  />
-                  <img
-                    src="./svg/abilities/ultrahand.svg"
-                    class="abilities-wheel-icon abilities-wheel-icon-7"
-                  />
-                </div>
-                <div class="abilities-wheel-parts">
-                  <img
-                    src="./svg/abilities/abilitiesWheelStraight.svg"
-                    class="abilities-wheel-background"
-                  />
-                  <img
-                    src="./svg/abilities/recall.svg"
-                    class="abilities-wheel-icon abilities-wheel-icon-8"
-                  />
-                </div>
-              </div>
-            </div> -->

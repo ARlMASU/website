@@ -385,7 +385,25 @@ h2 {
   position: relative;
   width: 490px;
   height: 490px;
-  outline: 5px solid red;
+  z-index: 10;
+}
+
+.arrow{
+  position: absolute;
+  display: flex;
+  z-index: 20;
+}
+
+line{
+  position: absolute;
+  z-index: 20;
+}
+
+.arrow-tip{
+  position: absolute;
+  display: flex;
+  height: 60px;
+  z-index: 20;
 }
 
 .circle-sector-duo {
@@ -394,14 +412,17 @@ h2 {
   gap: 160px;
   top: 35%;
   left: -16px;
+  z-index: 10;
 }
 
 .circle-sector-bg {
   height: 140px;
+  z-index: 10;
 }
 
 .circle-sector:nth-of-type(even) .circle-sector-bg {
   scale: -1;
+  z-index: 10;
 }
 
 .circle-sector-icon {
@@ -411,11 +432,13 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 .circle-sector {
   position: relative;
   rotate: -90deg;
+  z-index: 10;
 }
 
 .abilities-text-wrap {

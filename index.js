@@ -108,7 +108,7 @@ const allAnimatedElements = document.querySelectorAll(".animate");
 allAnimatedElements.forEach((element) => observer.observe(element));
 
 const allCircleSectorDuos = document.querySelectorAll(".circle-sector-duo"),
-allCircleSectorIcon = document.querySelectorAll(".circle-sector-icon");
+  allCircleSectorIcon = document.querySelectorAll(".circle-sector-icon");
 
 let rotationForCircleSectorDuos = 0;
 let rotationForCircleSectorIcon = 90;
@@ -117,30 +117,48 @@ let whatCircleSectorDuo = 0;
 allCircleSectorDuos.forEach((element) => {
   rotationForCircleSectorDuos += 45;
   rotationForCircleSectorIcon -= 45;
-  console.log(rotationForCircleSectorDuos);
-  element.style.rotate = (rotationForCircleSectorDuos) + "deg";
-  allCircleSectorIcon[whatCircleSectorDuo].style.rotate = (rotationForCircleSectorIcon) + "deg";
-  allCircleSectorIcon[whatCircleSectorDuo+1].style.rotate = (rotationForCircleSectorIcon) + "deg";
+  element.style.rotate = rotationForCircleSectorDuos + "deg";
+  allCircleSectorIcon[whatCircleSectorDuo].style.rotate =
+    rotationForCircleSectorIcon + "deg";
+  allCircleSectorIcon[whatCircleSectorDuo + 1].style.rotate =
+    rotationForCircleSectorIcon + "deg";
   whatCircleSectorDuo += 2;
 });
 
-
 const line = document.querySelector("line");
 const abilitiesWheel = document.querySelector(".abilities-wheel");
+// const arrowTip = document.querySelector("arrow-tip");
+
+let isMouseIn = false;
+
+// let speed = 0.09;
 
 function mouseUpdate(event) {
-  let rect = abilitiesWheel.getBoundingClientRect();
-  let mouseX = event.pageX - rect.left;
-  let mouseY = event.pageY - rect.y;
-// - rect.top - 2042.375;
-  line.setAttribute('x2', mouseX);
-  line.setAttribute('y2', mouseY);
+  if (isMouseIn) {
+    let rect = abilitiesWheel.getBoundingClientRect();
+    let mouseX = event.pageX - rect.left;
+    let mouseY = event.pageY - 2215;
 
-  console.log("x : " + mouseX);
-  console.log("y : " + mouseY);
-  console.log("rect.top : " + rect.y);
+    // let lineX = Math.round(line.getAttribute("x2"));
+    // let lineY = Math.round(line.getAttribute("y2"));
+
+    // let distX = mouseX - lineX;
+    // let distY = mouseY - lineY;
+
+    // lineX += (distX * speed);
+    // lineY += (distY * speed);
+
+    line.setAttribute("x2", mouseX);
+    line.setAttribute("y2", mouseY);
+
+    // console.log("x : " + mouseX);
+    // console.log("y : " + mouseY);
+  } else{
+    line.setAttribute("x2", 245);
+    line.setAttribute("y2", 245);
+  }
 }
 
-document.addEventListener("mousemove", mouseUpdate, false);
-document.addEventListener("mouseenter", mouseUpdate, false);
-document.addEventListener("mouseleave", mouseUpdate, false);
+abilitiesWheel.addEventListener("mousemove", mouseUpdate);
+abilitiesWheel.addEventListener("mouseenter", mouseUpdate);
+abilitiesWheel.addEventListener("mouseleave", mouseUpdate);
