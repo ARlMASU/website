@@ -127,33 +127,19 @@ allCircleSectorDuos.forEach((element) => {
 
 const line = document.querySelector("line");
 const abilitiesWheel = document.querySelector(".abilities-wheel");
-const arrowTip = document.querySelector("arrow-tip");
 
 let isMouseIn = false;
-
-// let speed = 0.09;
 
 function mouseUpdate(event) {
   if (isMouseIn) {
     let rect = abilitiesWheel.getBoundingClientRect();
+
     let mouseX = event.pageX - rect.left;
     let mouseY = event.pageY - 2215;
 
-    // let lineX = Math.round(line.getAttribute("x2"));
-    // let lineY = Math.round(line.getAttribute("y2"));
-
-    // let distX = mouseX - lineX;
-    // let distY = mouseY - lineY;
-
-    // lineX += (distX * speed);
-    // lineY += (distY * speed);
-
     line.setAttribute("x2", mouseX);
     line.setAttribute("y2", mouseY);
-
-    // console.log("x : " + mouseX);
-    // console.log("y : " + mouseY);
-  } else{
+  } else {
     line.setAttribute("x2", 245);
     line.setAttribute("y2", 245);
   }
@@ -163,15 +149,13 @@ abilitiesWheel.addEventListener("mousemove", mouseUpdate);
 abilitiesWheel.addEventListener("mouseenter", mouseUpdate);
 abilitiesWheel.addEventListener("mouseleave", mouseUpdate);
 
-const circleSectorBg = document.querySelectorAll(".circle-sector-bg");
-const circleSector = document.querySelectorAll(".circle-sector");
+const abilitiesTextH3 = document.querySelector(".abilities-text-h3");
+const abilitiesTextP = document.querySelector(".abilities-text-p");
+const arrowTip = document.querySelector(".arrow-tip");
 
-
-// function enter(element) {
-//   console.log("enter " + whatCircleSector);
-//   circleSectorBg[].setAttribute('src', './svg/abilities/abilitesWheelStraightActive.svg');
-// }
-
-// function leave(element) {
-//   circleSectorBg[1].setAttribute('src', './svg/abilities/abilitesWheelStraight.svg');
-// }
+function circleSectorLeave() {
+  abilitiesTextH3.textContent = "No ability selected";
+  abilitiesTextP.textContent = "Hover an ability to have a description of it";
+  abilitiesTextH3.style.color = "white";
+  abilitiesTextP.style.color = "white";
+}

@@ -132,7 +132,15 @@
       <div class="abilities-wrap">
         <h2>Abilities</h2>
         <div class="abilities-wheel-n-texts">
-          <div class="abilities-wheel" onmouseenter="isMouseIn = true" onmouseleave="isMouseIn = false">
+          <div
+            class="abilities-wheel"
+            onmouseenter="
+              isMouseIn = true;
+              abilitiesWheel.style.cursor = 'none';
+              arrowTip.style.display = 'none'"
+            onmouseleave="isMouseIn = false;
+            arrowTip.style.display = 'flex'"
+          >
             <div class="circle-sector-duo">
               <div class="circle-sector">
                 <img
@@ -144,7 +152,7 @@
                   src="./svg/abilities/map.svg"
                   alt=""
                   class="circle-sector-icon"
-                  style="opacity: .5;"
+                  style="opacity: 0.5"
                 />
               </div>
               <div class="circle-sector">
@@ -157,12 +165,20 @@
                   src="./svg/abilities/autobuild.svg"
                   alt=""
                   class="circle-sector-icon"
-                  style="opacity: .5;"
+                  style="opacity: 0.5"
                 />
               </div>
             </div>
             <div class="circle-sector-duo">
-              <div class="circle-sector">
+              <div
+                class="circle-sector"
+                onmouseenter="
+                  abilitiesTextH3.textContent = 'Ascend';
+                  abilitiesTextP.textContent = 'Allows you to dive upwards and pass through solid objects to appear at the top';
+                  abilitiesTextH3.style.color = '#bfd9b7';
+                  abilitiesTextP.style.color = '#acc4a4'"
+                onmouseleave="circleSectorLeave()"
+              >
                 <img
                   src="./svg/abilities/abilitiesWheelStraight.svg"
                   alt=""
@@ -174,7 +190,15 @@
                   class="circle-sector-icon"
                 />
               </div>
-              <div class="circle-sector">
+              <div
+                class="circle-sector"
+                onmouseenter="
+                  abilitiesTextH3.textContent = 'Fuse';
+                  abilitiesTextP.textContent = 'Allows you to attach all kind of materials and objects to your weapons, shields, and arrows';
+                  abilitiesTextH3.style.color = '#65d9c9';
+                  abilitiesTextP.style.color = '#3dafa0'"
+                onmouseleave="circleSectorLeave()"
+              >
                 <img
                   src="./svg/abilities/abilitiesWheelStraight.svg"
                   alt=""
@@ -198,7 +222,7 @@
                   src="./svg/abilities/camera.svg"
                   alt=""
                   class="circle-sector-icon"
-                  style="opacity: .5;"
+                  style="opacity: 0.5"
                 />
               </div>
               <div class="circle-sector">
@@ -211,12 +235,20 @@
                   src="./svg/abilities/amiibo.svg"
                   alt=""
                   class="circle-sector-icon"
-                  style="opacity: .5;"
+                  style="opacity: 0.5"
                 />
               </div>
             </div>
             <div class="circle-sector-duo">
-              <div class="circle-sector">
+              <div
+                class="circle-sector"
+                onmouseenter="
+                  abilitiesTextH3.textContent = 'Ultrahand';
+                  abilitiesTextP.textContent = 'Allows you to pick up an object, rotate it, and then attach it to other objects';
+                  abilitiesTextH3.style.color = '#d46635';
+                  abilitiesTextP.style.color = '#bd5427'"
+                onmouseleave="circleSectorLeave()"
+              >
                 <img
                   src="./svg/abilities/abilitiesWheelStraight.svg"
                   alt=""
@@ -228,7 +260,15 @@
                   class="circle-sector-icon"
                 />
               </div>
-              <div class="circle-sector">
+              <div
+                class="circle-sector"
+                onmouseenter="
+                  abilitiesTextH3.textContent = 'Recall';
+                  abilitiesTextP.textContent = 'Allows you to dive upwards and pass through solid objects to appear at the top';
+                  abilitiesTextH3.style.color = '#dea244';
+                  abilitiesTextP.style.color = '#b0781e'"
+                onmouseleave="circleSectorLeave()"
+              >
                 <img
                   src="./svg/abilities/abilitiesWheelStraight.svg"
                   alt=""
@@ -243,20 +283,20 @@
             </div>
           </div>
           <div class="arrow">
-            <svg
-              height="490"
-              width="490"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg height="490" width="490" xmlns="http://www.w3.org/2000/svg">
               <line
                 x1="50%"
                 y1="50%"
                 x2="50%"
                 y2="50%"
-                style="stroke: #fff8b9; stroke-width: 3"
+                style="stroke: #ffee95; stroke-width: 3"
               />
             </svg>
-            <img src="./svg/abilities/abilitesWheelArrowActive.svg" alt="" class="arrow-tip">
+            <img
+              src="./svg/abilities/abilitesWheelArrowStand.svg"
+              alt=""
+              class="arrow-tip"
+            />
           </div>
           <div class="abilities-text-wrap">
             <h3 class="abilities-text-h3">No ability selected</h3>

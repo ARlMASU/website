@@ -388,22 +388,28 @@ h2 {
   z-index: 10;
 }
 
-.arrow{
+.arrow {
   position: absolute;
   display: flex;
-  /* z-index: 10; */
+  z-index: 5;
 }
 
-line{
-  position: absolute;
-  /* z-index: 10; */
-}
-
-.arrow-tip{
+line {
   position: absolute;
   display: flex;
-  height: 60px;
-  /* z-index: 10; */
+  z-index: 4;
+  filter: drop-shadow(0 0 6px #ffee95);
+}
+
+.arrow-tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: 25px;
+  transition: all 0.2s;
+  filter: drop-shadow(0 0 6px #ffee95);
 }
 
 .circle-sector-duo {
@@ -412,22 +418,22 @@ line{
   gap: 160px;
   top: 35%;
   left: -16px;
-  /* z-index: 20; */
+  z-index: 1;
 }
 
 .circle-sector-bg {
   width: 178px;
   height: 140px;
-  /* z-index: 20; */
-  transition: all .1s ease;
+  z-index: 20;
+  transition: all 0.1s ease;
+  z-index: 1;
 }
 
 .circle-sector:nth-of-type(even) .circle-sector-bg {
   scale: -1;
-  /* z-index: 20; */
 }
 
-.circle-sector:hover .circle-sector-bg{
+.circle-sector:hover .circle-sector-bg {
   content: url(../svg/abilities/abilitesWheelStraightActive.svg);
   filter: drop-shadow(0 0 6px #ffee95);
 }
@@ -439,13 +445,12 @@ line{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* z-index: 20; */
+  z-index: 1;
 }
 
 .circle-sector {
   position: relative;
   rotate: -90deg;
-  /* z-index: 20; */
 }
 
 .abilities-text-wrap {
@@ -457,12 +462,17 @@ line{
 .abilities-text-h3 {
   font-size: 40px;
   font-family: "rodinB";
-  color: white;
+  color: #acc4a4;
+  transition: all 0.2s ease;
 }
 
 .abilities-text-p {
   font-size: 32px;
   font-family: "rodinM";
+  width: 640px;
+  color: white;
+  line-height: 48px;
+  transition: all 0.2s ease;
 }
 
 /* Story */
