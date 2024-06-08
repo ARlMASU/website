@@ -92,7 +92,7 @@ function rotateAnim() {
 
 function rotateStop() {
   navLogoCircle.style.transitionDuration = "1s";
-  clearTimeout(timeoutId);
+  clearTimeout(timoutRotate);
   logoCircleRotationVelocity =
     Math.round(logoCircleRotationVelocity / 180) * 180;
   navLogoCircle.style.rotate = logoCircleRotationVelocity + "deg";
