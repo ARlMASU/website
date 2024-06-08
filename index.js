@@ -1,4 +1,5 @@
 // IMPORT /////////////////////////////////////////////////////////////////////////////
+
 const // scrollTo
   features = document.querySelector("#features"),
   story = document.querySelector("#story"),
