@@ -177,3 +177,5 @@ function circleSectorLeave() {
   abilitiesTextH3.style.color = "white";
   abilitiesTextP.style.color = "white";
 }
+
+circleSectorLeave();
