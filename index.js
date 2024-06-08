@@ -44,10 +44,6 @@ const viewportCenterX = window.innerWidth / 2;
 
 const offsetX = (viewportCenterX - arrowCenterX) * 2.5;
 
-document.addEventListener("DOMContentLoaded", () => {
-  explorationWrap.style.marginLeft = `${offsetX}px`;
-});
-
 // abilityWheel var
 let rotationForCircleSectorDuos = 0;
 let rotationForCircleSectorIcon = 90;
@@ -125,6 +121,10 @@ document.addEventListener("scroll", () => {
       explorationText[i].classList.remove("exploration-text-active");
     }
   }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  explorationWrap.style.marginLeft = `${offsetX}px`;
 });
 
 // storyArrow
