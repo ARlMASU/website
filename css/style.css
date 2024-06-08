@@ -384,19 +384,17 @@ h2 {
   position: relative;
   width: 490px;
   height: 490px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .arrow {
   position: absolute;
   display: flex;
-  z-index: 5;
 }
 
 line {
   position: absolute;
   display: flex;
-  z-index: 4;
   filter: drop-shadow(0 0 6px #ffee95);
 }
 
@@ -407,7 +405,6 @@ line {
   transform: translate(-50%, -50%);
   display: flex;
   height: 25px;
-  transition: all 0.2s;
   filter: drop-shadow(0 0 6px #ffee95);
 }
 
@@ -417,15 +414,12 @@ line {
   gap: 160px;
   top: 35%;
   left: -16px;
-  z-index: 1;
 }
 
 .circle-sector-bg {
   width: 178px;
   height: 140px;
-  z-index: 20;
   transition: all 0.1s ease;
-  z-index: 1;
 }
 
 .circle-sector:nth-of-type(even) .circle-sector-bg {
@@ -444,7 +438,6 @@ line {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
 }
 
 .circle-sector {
