@@ -1,6 +1,10 @@
-const features = document.querySelector("#features"),
+// IMPORT /////////////////////////////////////////////////////////////////////////////
+const // scrollTo
+  features = document.querySelector("#features"),
   story = document.querySelector("#story"),
+  // rotateAnim
   navLogoCircle = document.querySelector(".nav-logo-circle"),
+  // list
   diamonds = document.querySelectorAll(".exploration-list-diamonds"),
   diamondsWrap = document.querySelectorAll(".exploration-list-diamonds-wrap"),
   explorationImagesNTexts = document.querySelectorAll(
@@ -10,11 +14,47 @@ const features = document.querySelector("#features"),
   arrow = document.querySelectorAll(".exploration-arrow"),
   arrowWrap = document.querySelectorAll(".exploration-arrow-wrap"),
   explorationText = document.querySelectorAll(".exploration-text"),
-  footer = document.querySelector("footer");
+  // storyArrowAnim
+  allAnimatedElements = document.querySelectorAll(".animate"),
+  // abilityWheel
+  line = document.querySelector("line"),
+  allCircleSectorDuos = document.querySelectorAll(".circle-sector-duo"),
+  allCircleSectorIcon = document.querySelectorAll(".circle-sector-icon"),
+  abilitiesWheel = document.querySelector(".abilities-wheel"),
+  abilitiesTextH3 = document.querySelector(".abilities-text-h3"),
+  abilitiesTextP = document.querySelector(".abilities-text-p"),
+  arrowTip = document.querySelector(".arrow-tip");
 
-let velocity = 0;
-let timeoutId;
+// VAR ////////////////////////////////////////////////////////////////////////////////
 
+// scrollTo var
+let explorationImagesNTextsRect = [];
+const windowHeight = window.innerHeight;
+
+// rotateAnim var
+let logoCircleRotationVelocity = 0;
+let timoutRotate;
+
+// list var
+const arrowRect = arrow[0].getBoundingClientRect();
+const arrowCenterX = arrowRect.left + arrowRect.width / 2;
+
+const viewportCenterX = window.innerWidth / 2;
+
+const offsetX = (viewportCenterX - arrowCenterX) * 2.5;
+
+explorationWrap.style.marginLeft = `${offsetX}px`;
+
+// abilityWheel var
+let rotationForCircleSectorDuos = 0;
+let rotationForCircleSectorIcon = 90;
+let whatCircleSectorDuo = 0;
+
+let isMouseIn = false;
+
+// FUNCTION ///////////////////////////////////////////////////////////////////////////
+
+// scrollTo
 function scrollToElement(element) {
   if (element == features) {
     window.scrollTo({
@@ -42,23 +82,23 @@ function scrollToElement(element) {
   }
 }
 
+// rotateNavLogoCircle
 function rotateAnim() {
   navLogoCircle.style.transitionDuration = "0.6s";
-  velocity += 10;
-  navLogoCircle.style.rotate = velocity + "deg";
-  timeoutId = setTimeout(rotateAnim, 60);
+  logoCircleRotationVelocity += 10;
+  navLogoCircle.style.rotate = logoCircleRotationVelocity + "deg";
+  timoutRotate = setTimeout(rotateAnim, 60);
 }
 
 function rotateStop() {
   navLogoCircle.style.transitionDuration = "1s";
   clearTimeout(timeoutId);
-  velocity = Math.round(velocity / 180) * 180;
-  navLogoCircle.style.rotate = velocity + "deg";
+  logoCircleRotationVelocity =
+    Math.round(logoCircleRotationVelocity / 180) * 180;
+  navLogoCircle.style.rotate = logoCircleRotationVelocity + "deg";
 }
 
-let explorationImagesNTextsRect = [];
-const windowHeight = window.innerHeight;
-
+// list
 document.addEventListener("scroll", () => {
   for (let i = 0; i <= 2; i++) {
     explorationImagesNTextsRect[i] =
@@ -84,15 +124,7 @@ document.addEventListener("scroll", () => {
   }
 });
 
-const arrowRect = arrow[0].getBoundingClientRect();
-const arrowCenterX = arrowRect.left + arrowRect.width / 2;
-
-const viewportCenterX = window.innerWidth / 2;
-
-const offsetX = (viewportCenterX - arrowCenterX) * 2.5;
-
-explorationWrap.style.marginLeft = `${offsetX}px`;
-
+// storyArrow
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -103,17 +135,9 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-const allAnimatedElements = document.querySelectorAll(".animate");
-
 allAnimatedElements.forEach((element) => observer.observe(element));
 
-const allCircleSectorDuos = document.querySelectorAll(".circle-sector-duo"),
-  allCircleSectorIcon = document.querySelectorAll(".circle-sector-icon");
-
-let rotationForCircleSectorDuos = 0;
-let rotationForCircleSectorIcon = 90;
-let whatCircleSectorDuo = 0;
-
+// abilityWheel
 allCircleSectorDuos.forEach((element) => {
   rotationForCircleSectorDuos += 45;
   rotationForCircleSectorIcon -= 45;
@@ -125,17 +149,12 @@ allCircleSectorDuos.forEach((element) => {
   whatCircleSectorDuo += 2;
 });
 
-const line = document.querySelector("line");
-const abilitiesWheel = document.querySelector(".abilities-wheel");
-
-let isMouseIn = false;
-
 function mouseUpdate(event) {
   if (isMouseIn) {
     let rect = abilitiesWheel.getBoundingClientRect();
 
     let mouseX = event.pageX - rect.left;
-    let mouseY = event.pageY - 2215;
+    let mouseY = event.pageY - 2215; // rect.top ne marche pas ici, je ne saurais dire pourquoi.
 
     line.setAttribute("x2", mouseX);
     line.setAttribute("y2", mouseY);
@@ -148,10 +167,6 @@ function mouseUpdate(event) {
 abilitiesWheel.addEventListener("mousemove", mouseUpdate);
 abilitiesWheel.addEventListener("mouseenter", mouseUpdate);
 abilitiesWheel.addEventListener("mouseleave", mouseUpdate);
-
-const abilitiesTextH3 = document.querySelector(".abilities-text-h3");
-const abilitiesTextP = document.querySelector(".abilities-text-p");
-const arrowTip = document.querySelector(".arrow-tip");
 
 function circleSectorLeave() {
   abilitiesTextH3.textContent = "No ability selected";

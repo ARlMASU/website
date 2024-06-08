@@ -13,7 +13,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* user-select: none; */
 }
 
 body {
@@ -45,7 +44,7 @@ a {
   );
 }
 
-/* Nav */
+/* Nav //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 nav {
   position: sticky;
@@ -163,7 +162,7 @@ nav {
   filter: drop-shadow(0px 0px 12px var(--primary));
 }
 
-/* Header */
+/* Header ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 header {
   background-color: #2b3c3a;
@@ -221,7 +220,7 @@ header {
   filter: drop-shadow(0px 4px 12px #000000);
 }
 
-/* Exploration */
+/* Exploration //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .exploration {
   display: flex;
@@ -365,7 +364,7 @@ h2 {
   transform: scale(1.2);
 }
 
-/* Abilities */
+/* Abilities ////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .abilities-wrap {
   display: flex;
@@ -475,7 +474,7 @@ line {
   transition: all 0.2s ease;
 }
 
-/* Story */
+/* Story ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .story-decoration {
   background-image: url(../svg/runes-bottom-ivory.svg);
@@ -582,12 +581,11 @@ svg.in-view > polygon#triangle1 {
 }
 
 .story img {
-  /* height: 360px; */
   width: 32vw;
   border-radius: 2vw;
 }
 
-/* Footer */
+/* Footer ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 footer {
   height: 570px;
@@ -646,45 +644,4 @@ footer {
   position: absolute;
   top: 50%;
   transform: translate(404.215px, -50%);
-}
-
-@media screen and (max-width: 1260px) {
-  .header-link {
-    height: 472px;
-  }
-  .exploration-text {
-    font-size: 3vw;
-  }
-}
-@media screen and (max-width: 1150px) {
-  .header-link {
-    height: 372px;
-  }
-  .header-logo {
-    height: 272px;
-  }
-  .header-play-now-button {
-    font-size: 35px;
-  }
-  header {
-    gap: 64px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .header-link {
-    height: 372px;
-  }
-  header {
-    gap: 0px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .header-link {
-    display: none;
-  }
-  header {
-    gap: 0px;
-  }
 }
