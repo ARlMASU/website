@@ -391,19 +391,19 @@ h2 {
 .arrow{
   position: absolute;
   display: flex;
-  z-index: 20;
+  /* z-index: 10; */
 }
 
 line{
   position: absolute;
-  z-index: 20;
+  /* z-index: 10; */
 }
 
 .arrow-tip{
   position: absolute;
   display: flex;
   height: 60px;
-  z-index: 20;
+  /* z-index: 10; */
 }
 
 .circle-sector-duo {
@@ -412,17 +412,24 @@ line{
   gap: 160px;
   top: 35%;
   left: -16px;
-  z-index: 10;
+  /* z-index: 20; */
 }
 
 .circle-sector-bg {
+  width: 178px;
   height: 140px;
-  z-index: 10;
+  /* z-index: 20; */
+  transition: all .1s ease;
 }
 
 .circle-sector:nth-of-type(even) .circle-sector-bg {
   scale: -1;
-  z-index: 10;
+  /* z-index: 20; */
+}
+
+.circle-sector:hover .circle-sector-bg{
+  content: url(../svg/abilities/abilitesWheelStraightActive.svg);
+  filter: drop-shadow(0 0 6px #ffee95);
 }
 
 .circle-sector-icon {
@@ -432,13 +439,13 @@ line{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  /* z-index: 20; */
 }
 
 .circle-sector {
   position: relative;
   rotate: -90deg;
-  z-index: 10;
+  /* z-index: 20; */
 }
 
 .abilities-text-wrap {

@@ -127,7 +127,7 @@ allCircleSectorDuos.forEach((element) => {
 
 const line = document.querySelector("line");
 const abilitiesWheel = document.querySelector(".abilities-wheel");
-// const arrowTip = document.querySelector("arrow-tip");
+const arrowTip = document.querySelector("arrow-tip");
 
 let isMouseIn = false;
 
@@ -162,3 +162,16 @@ function mouseUpdate(event) {
 abilitiesWheel.addEventListener("mousemove", mouseUpdate);
 abilitiesWheel.addEventListener("mouseenter", mouseUpdate);
 abilitiesWheel.addEventListener("mouseleave", mouseUpdate);
+
+const circleSectorBg = document.querySelectorAll(".circle-sector-bg");
+const circleSector = document.querySelectorAll(".circle-sector");
+
+
+// function enter(element) {
+//   console.log("enter " + whatCircleSector);
+//   circleSectorBg[].setAttribute('src', './svg/abilities/abilitesWheelStraightActive.svg');
+// }
+
+// function leave(element) {
+//   circleSectorBg[1].setAttribute('src', './svg/abilities/abilitesWheelStraight.svg');
+// }
