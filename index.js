@@ -43,7 +43,9 @@ const viewportCenterX = window.innerWidth / 2;
 
 const offsetX = (viewportCenterX - arrowCenterX) * 2.5;
 
-explorationWrap.style.marginLeft = `${offsetX}px`;
+document.addEventListener("DOMContentLoaded", () => {
+  explorationWrap.style.marginLeft = `${offsetX}px`;
+});
 
 // abilityWheel var
 let rotationForCircleSectorDuos = 0;
