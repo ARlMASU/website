@@ -55,8 +55,11 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 36px 8px 36px 8px;
-  background-color: var(--surface-1);
+  background-color: rgba(17, 17, 17, 0.85);
   z-index: 10;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-logo {
@@ -198,6 +201,9 @@ header {
   outline: solid 6px var(--on-surface-2);
   outline-offset: -6px;
   transition: all 0.2s ease-in-out;
+  background: rgba(203, 182, 135, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .play-now-button:hover {
@@ -431,6 +437,10 @@ line {
   filter: drop-shadow(0 0 6px #ffee95);
 }
 
+.circle-sector:hover .circle-sector-icon {
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, .5));
+}
+
 .circle-sector-icon {
   height: 100px;
   transform-origin: left top;
@@ -455,7 +465,7 @@ line {
   font-size: 40px;
   font-family: "rodinB";
   color: #acc4a4;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 
 .abilities-text-p {
@@ -464,7 +474,7 @@ line {
   width: 640px;
   color: white;
   line-height: 48px;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
 }
 
 /* Story ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -517,6 +527,7 @@ line {
   left: 50%;
   transform: translate(-50%, -25%);
   overflow: visible;
+  filter: drop-shadow(0 0 12px #cbb687);
 }
 
 .story-title svg > polygon {
@@ -542,7 +553,7 @@ svg.in-view > polygon {
   transform: translate(25%, -25%);
 }
 
-svg.in-view polygon#triangle3 {
+svg.in-view > polygon#triangle3 {
   transform: translate(0%, 0%);
 }
 
@@ -574,8 +585,8 @@ svg.in-view > polygon#triangle1 {
 }
 
 .story img {
-  width: 32vw;
   border-radius: 2vw;
+  width: 640px;
 }
 
 /* Footer ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
