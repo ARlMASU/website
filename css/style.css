@@ -438,7 +438,7 @@ line {
 }
 
 .circle-sector:hover .circle-sector-icon {
-  filter: drop-shadow(0 0 6px rgba(0, 0, 0, .5));
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.5));
 }
 
 .circle-sector-icon {
@@ -587,6 +587,7 @@ svg.in-view > polygon#triangle1 {
 .story img {
   border-radius: 2vw;
   width: 640px;
+  filter: drop-shadow(0 0 12px rgba(92, 63, 27, 0.75));
 }
 
 /* Footer ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
