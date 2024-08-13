@@ -27,27 +27,27 @@
         </div>
       </a>
       <div class="nav-buttons-container">
-        <a class="nav-button" onclick="scrollToElement(home)">
+        <a class="nav-button unselecteble" onclick="scrollToElement(home)">
           <p class="nav-button-text-zonai">home</p>
           <p class="nav-button-text-english">Home</p>
         </a>
-        <a class="nav-button" onclick="scrollToElement(features)">
+        <a class="nav-button unselecteble" onclick="scrollToElement(features)">
           <p class="nav-button-text-zonai">tokuso</p>
           <p class="nav-button-text-english">Features</p>
         </a>
-        <a class="nav-button" onclick="scrollToElement(story)">
+        <a class="nav-button unselecteble" onclick="scrollToElement(story)">
           <p class="nav-button-text-zonai">story</p>
           <p class="nav-button-text-english">Story</p>
         </a>
       </div>
     </nav>
-    <header id="home">
+    <header id="home" class="unselecteble">
       <div class="header-left-part">
         <img src="./svg/logo.svg" alt="logo" class="header-logo" />
         <a
           href="https://ec.nintendo.com/AU/en/titles/70010000063715"
           target="_blank"
-          class="play-now-button header-play-now-button"
+          class="play-now-button header-play-now-button unselecteble"
           >Play now</a
         >
       </div>
@@ -58,7 +58,7 @@
       <h2>Exploration</h2>
       <div class="exploration">
         <div class="exploration-wrap">
-          <div class="exploration-list-wrap">
+          <div class="exploration-list-wrap unselecteble">
             <img src="./svg/list.svg" alt="list" class="exploration-list" />
             <div
               class="exploration-list-diamonds-wrap exploration-list-diamond-1-wrap"
@@ -87,7 +87,7 @@
               class="exploration-images-n-texts"
               onmouseover="whichDiamond=0"
             >
-              <div class="exploration-image-wrap">
+              <div class="exploration-image-wrap unselecteble">
                 <img
                   src="./images/sky-arrow.png"
                   alt="sky"
@@ -103,7 +103,7 @@
               class="exploration-images-n-texts"
               onmouseover="whichDiamond=1"
             >
-              <div class="exploration-image-wrap">
+              <div class="exploration-image-wrap unselecteble">
                 <img
                   src="./images/floor-arrow.png"
                   alt="floor"
@@ -119,7 +119,7 @@
               class="exploration-images-n-texts"
               onmouseover="whichDiamond=2"
             >
-              <div class="exploration-image-wrap">
+              <div class="exploration-image-wrap unselecteble">
                 <img
                   src="./images/depths-arrow.png"
                   alt="floor"
@@ -138,11 +138,12 @@
         <h2>Abilities</h2>
         <div class="abilities-wheel-n-texts">
           <div
-            class="abilities-wheel"
+            class="abilities-wheel unselecteble"
             onmouseenter="
               isMouseIn = true;
               abilitiesWheel.style.cursor = 'none'
-              arrowTip.style.display = 'none'"
+              arrowTip.style.display = 'none'
+            "
             onmouseleave="isMouseIn = false; arrowTip.style.display = 'flex'"
           >
             <div class="circle-sector-duo">
@@ -286,7 +287,7 @@
               </div>
             </div>
           </div>
-          <div class="arrow">
+          <div class="arrow unselecteble">
             <svg height="490" width="490" xmlns="http://www.w3.org/2000/svg">
               <line
                 x1="50%"
@@ -349,7 +350,7 @@
         </div>
         <div class="story-image-n-text">
           <div class="story-image-wrap">
-            <img src="./images/story.png" />
+            <img src="./images/story.png" class="unselecteble"/>
           </div>
           <p>
             An unknwown amount of time after having defeated
@@ -364,7 +365,7 @@
       <div class="story-decoration story-decoration-bottom"></div>
     </main>
     <footer>
-      <img src="./svg/logo.svg" class="footer-logo" />
+      <img src="./svg/logo.svg" class="footer-logo unselecteble" />
       <div class="footer-central-part">
         <a href="https://www.nintendo.com/us/privacy-policy/" target="_blank">
           Privacy Policy
@@ -377,7 +378,7 @@
       <a
         href="https://ec.nintendo.com/AU/en/titles/70010000063715"
         target="_blank"
-        class="play-now-button footer-play-now-button"
+        class="play-now-button footer-play-now-button unselecteble"
       >
         Play now
       </a>

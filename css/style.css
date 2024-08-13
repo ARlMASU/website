@@ -1,7 +1,7 @@
 @import url(./fonts.css);
 @import url(./variables.css);
 
-:root {
+.unselecteble {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -32,6 +32,7 @@ a {
 
 ::-webkit-scrollbar {
   background-color: var(--surface-0);
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
