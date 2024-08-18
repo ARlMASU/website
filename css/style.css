@@ -33,6 +33,7 @@ a {
 ::-webkit-scrollbar {
   background-color: var(--surface-0);
   width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
